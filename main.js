@@ -156,6 +156,8 @@ class judoisoftControll extends utils.Adapter {
         try {
             // check data
             const urlGet = baseUrl + "?token=" + _tokenData + "&group=register&command=get%20device%20data";
+            
+            this.log.debug("urlGet: " + urlGet);
 
             let conResult = await axios.get(urlGet, { httpsAgent: agent });
             
