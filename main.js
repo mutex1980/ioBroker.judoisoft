@@ -534,6 +534,8 @@ class judoisoftControll extends utils.Adapter {
        
        try {
             const tokenObject = await axios.get(statusURL, { httpsAgent: agent });
+           
+            this.log.debug("tokenObject.status: " + tokenObject.status + ", tokenObject.data.status: " + tokenObject.data.status);
 
             if (tokenObject.status = 200) {  // der wird evtl. nicht gebraucht
                 if (tokenObject.data.status == 'online' || tokenObject.data.status == 'ok') {
