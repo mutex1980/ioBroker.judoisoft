@@ -568,6 +568,7 @@ class judoisoftControll extends utils.Adapter {
                 } else {
                     token = null;
                 }
+                this.log.debug("received token: " + token);
                 return token;
             } else {
                 this.setState('info.connection', false, true);
